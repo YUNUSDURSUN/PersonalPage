@@ -1,130 +1,298 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Yunus Dursun | Academic Homepage</title>
   <style>
+    * {
+      box-sizing: border-box;
+    }
+
     body {
-      font-family: Arial, sans-serif;
       margin: 0;
-      padding: 0;
-      line-height: 1.6;
-      background: #f8f9fb;
-      color: #222;
+      font-family: Arial, Helvetica, sans-serif;
+      background: #f4f7fb;
+      color: #1f2937;
+      line-height: 1.7;
     }
-    .container {
-      max-width: 900px;
+
+    .wrapper {
+      max-width: 1050px;
       margin: 40px auto;
-      background: white;
-      padding: 40px;
-      border-radius: 12px;
-      box-shadow: 0 4px 18px rgba(0,0,0,0.08);
+      padding: 0 20px;
     }
-    h1, h2 {
-      color: #143d6b;
+
+    .card {
+      background: #ffffff;
+      border-radius: 18px;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+      overflow: hidden;
     }
-    h1 {
-      margin-bottom: 8px;
+
+    .hero {
+      background: linear-gradient(135deg, #0f172a, #1d4ed8);
+      color: white;
+      padding: 48px 40px;
     }
-    .subtitle {
-      color: #555;
-      margin-bottom: 24px;
+
+    .hero h1 {
+      margin: 0 0 10px 0;
+      font-size: 2.4rem;
     }
-    a {
-      color: #0b5ed7;
+
+    .hero p {
+      margin: 6px 0;
+      font-size: 1.05rem;
+      opacity: 0.96;
+    }
+
+    .hero a {
+      color: #dbeafe;
       text-decoration: none;
     }
+
+    .hero a:hover {
+      text-decoration: underline;
+    }
+
+    .content {
+      display: grid;
+      grid-template-columns: 300px 1fr;
+      gap: 0;
+    }
+
+    .sidebar {
+      background: #eff6ff;
+      padding: 30px;
+      border-right: 1px solid #dbeafe;
+    }
+
+    .main {
+      padding: 34px;
+    }
+
+    h2 {
+      color: #0f172a;
+      margin-top: 0;
+      margin-bottom: 12px;
+      font-size: 1.35rem;
+      border-bottom: 2px solid #dbeafe;
+      padding-bottom: 8px;
+    }
+
+    .section {
+      margin-bottom: 34px;
+    }
+
+    .profile-box {
+      text-align: center;
+      margin-bottom: 28px;
+    }
+
+    .avatar {
+      width: 120px;
+      height: 120px;
+      border-radius: 50%;
+      background: #cbd5e1;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 2rem;
+      font-weight: bold;
+      color: #334155;
+      margin-bottom: 14px;
+    }
+
+    .tag {
+      display: inline-block;
+      background: #dbeafe;
+      color: #1d4ed8;
+      padding: 6px 10px;
+      border-radius: 999px;
+      margin: 4px 4px 0 0;
+      font-size: 0.9rem;
+    }
+
+    ul {
+      padding-left: 20px;
+      margin-top: 10px;
+    }
+
+    li {
+      margin-bottom: 12px;
+    }
+
+    a {
+      color: #1d4ed8;
+      text-decoration: none;
+    }
+
     a:hover {
       text-decoration: underline;
     }
-    ul {
-      padding-left: 22px;
+
+    .pub-title {
+      font-weight: bold;
+      color: #111827;
     }
-    .section {
-      margin-top: 34px;
+
+    .muted {
+      color: #6b7280;
     }
-    .pub li {
-      margin-bottom: 12px;
+
+    .button {
+      display: inline-block;
+      margin-top: 10px;
+      padding: 10px 16px;
+      background: #1d4ed8;
+      color: white;
+      border-radius: 10px;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    .button:hover {
+      background: #1e40af;
+      text-decoration: none;
+    }
+
+    @media (max-width: 820px) {
+      .content {
+        grid-template-columns: 1fr;
+      }
+
+      .sidebar {
+        border-right: none;
+        border-bottom: 1px solid #dbeafe;
+      }
+
+      .hero {
+        padding: 36px 24px;
+      }
+
+      .main,
+      .sidebar {
+        padding: 24px;
+      }
     }
   </style>
 </head>
 <body>
-  <div class="container">
-    <h1>Yunus Dursun</h1>
-    <p class="subtitle">
-      Assistant Professor, Marmara University
-    </p>
+  <div class="wrapper">
+    <div class="card">
+      <div class="hero">
+        <h1>Yunus Dursun</h1>
+        <p>Assistant Professor | Marmara University</p>
+        <p>Wireless Communications, NOMA, MIMO, 6G Networks, Convex Optimization</p>
+        <p>
+          Google Scholar:
+          <a href="https://scholar.google.com/citations?user=ccEBlGkAAAAJ&hl=en" target="_blank">
+            scholar profile
+          </a>
+        </p>
+      </div>
 
-    <p>
-      <strong>Email:</strong> yourmail@marmara.edu.tr<br>
-      <strong>Google Scholar:</strong>
-      <a href="https://scholar.google.com/citations?user=ccEBlGkAAAAJ&hl=en" target="_blank">
-        View Profile
-      </a>
-    </p>
+      <div class="content">
+        <aside class="sidebar">
+          <div class="profile-box">
+            <div class="avatar">YD</div>
+            <div class="muted">Academic Profile</div>
+          </div>
 
-    <div class="section">
-      <h2>Biography</h2>
-      <p>
-        I am an academic researcher at Marmara University working in wireless communications,
-        with a particular focus on NOMA, MIMO, 6G networks, and convex optimization.
-        My research interests include advanced signal processing algorithms and resource
-        allocation methods for next-generation communication systems.
-      </p>
-    </div>
+          <div class="section">
+            <h2>Contact</h2>
+            <p>
+              Marmara University<br>
+              Istanbul, Türkiye
+            </p>
+            <p>
+              Email: yourname@marmara.edu.tr
+            </p>
+            <a class="button" href="https://scholar.google.com/citations?user=ccEBlGkAAAAJ&hl=en" target="_blank">
+              View Google Scholar
+            </a>
+          </div>
 
-    <div class="section">
-      <h2>Research Interests</h2>
-      <ul>
-        <li>Non-Orthogonal Multiple Access (NOMA)</li>
-        <li>Multiple-Input Multiple-Output (MIMO) Systems</li>
-        <li>6G Wireless Networks</li>
-        <li>Convex Optimization</li>
-        <li>Signal Processing for Wireless Communications</li>
-      </ul>
-    </div>
+          <div class="section">
+            <h2>Research Areas</h2>
+            <span class="tag">NOMA</span>
+            <span class="tag">MIMO</span>
+            <span class="tag">6G Networks</span>
+            <span class="tag">Convex Optimization</span>
+            <span class="tag">Wireless Communications</span>
+            <span class="tag">MEC</span>
+          </div>
 
-    <div class="section">
-      <h2>Selected Publications</h2>
-      <ul class="pub">
-        <li>
-          Dursun, Y., Wang, K., Ding, Z.
-          “Secrecy sum rate maximization for a MIMO-NOMA uplink transmission in 6G networks.”
-          <em>Physical Communication</em>, 2022.
-        </li>
-        <li>
-          Dursun, Y., Fang, F., Ding, Z.
-          “Hybrid NOMA based MIMO offloading for mobile edge computing in 6G networks.”
-          <em>China Communications</em>, 2022.
-        </li>
-        <li>
-          Dursun, Y., Goktas, M. B., Ding, Z.
-          “Green NOMA based MU-MIMO transmission for MEC in 6G Networks.”
-          <em>Computer Networks</em>, 2023.
-        </li>
-        <li>
-          Dursun, Y., Al-Basit, S. M., Ding, Z.
-          “Wireless powered NOMA-based cognitive radio for 6G networks.”
-          <em>Computer Networks</em>, 2024.
-        </li>
-      </ul>
-    </div>
+          <div class="section">
+            <h2>Links</h2>
+            <p><a href="https://scholar.google.com/citations?user=ccEBlGkAAAAJ&hl=en" target="_blank">Google Scholar</a></p>
+            <p><a href="https://www.researchgate.net/profile/Yunus-Dursun" target="_blank">ResearchGate</a></p>
+          </div>
+        </aside>
 
-    <div class="section">
-      <h2>Profiles</h2>
-      <ul>
-        <li><a href="https://scholar.google.com/citations?user=ccEBlGkAAAAJ&hl=en" target="_blank">Google Scholar</a></li>
-        <li><a href="https://avesis.marmara.edu.tr/yunus.dursun/yayinlar" target="_blank">AVESIS</a></li>
-      </ul>
-    </div>
+        <main class="main">
+          <section class="section">
+            <h2>Biography</h2>
+            <p>
+              I am an Assistant Professor at Marmara University working in wireless
+              communications and optimization for next-generation networks. My research
+              focuses on NOMA-based transmission, MIMO systems, mobile edge computing,
+              physical layer security, and optimization methods for 6G communication systems.
+            </p>
+          </section>
 
-    <div class="section">
-      <h2>Contact</h2>
-      <p>
-        Marmara University<br>
-        Email: yunus.dursun@marmara.edu.tr
-      </p>
+          <section class="section">
+            <h2>Research Interests</h2>
+            <ul>
+              <li>Non-Orthogonal Multiple Access (NOMA)</li>
+              <li>Multiple-Input Multiple-Output (MIMO) systems</li>
+              <li>6G and beyond wireless networks</li>
+              <li>Mobile Edge Computing (MEC)</li>
+              <li>Physical Layer Security</li>
+              <li>Convex Optimization and resource allocation</li>
+            </ul>
+          </section>
+
+          <section class="section">
+            <h2>Selected Publications</h2>
+            <ul>
+              <li>
+                <span class="pub-title">Secrecy sum rate maximization for a MIMO-NOMA uplink transmission in 6G networks</span><br>
+                <span class="muted">Y. Dursun, K. Wang, Z. Ding — Physical Communication, 2022</span>
+              </li>
+              <li>
+                <span class="pub-title">Hybrid NOMA based MIMO offloading for mobile edge computing in 6G networks</span><br>
+                <span class="muted">Y. Dursun, Z. Ding, F. Fang — 2022</span>
+              </li>
+              <li>
+                <span class="pub-title">Green NOMA based MU-MIMO transmission for MEC in 6G Networks</span><br>
+                <span class="muted">Y. Dursun, M. B. Goktas, Z. Ding — 2023</span>
+              </li>
+              <li>
+                <span class="pub-title">Wireless powered NOMA-based cognitive radio for 6G networks</span><br>
+                <span class="muted">Y. Dursun, S. Al Basit, Z. Ding — 2024</span>
+              </li>
+            </ul>
+          </section>
+
+          <section class="section">
+            <h2>Academic Profiles</h2>
+            <ul>
+              <li><a href="https://scholar.google.com/citations?user=ccEBlGkAAAAJ&hl=en" target="_blank">Google Scholar Profile</a></li>
+              <li><a href="https://www.researchgate.net/profile/Yunus-Dursun" target="_blank">ResearchGate Profile</a></li>
+            </ul>
+          </section>
+
+          <section class="section">
+            <h2>Teaching and Supervision</h2>
+            <p>
+              This section can be updated with your courses, student supervision,
+              ongoing projects, and announcements.
+            </p>
+          </section>
+        </main>
+      </div>
     </div>
   </div>
 </body>
